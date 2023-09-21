@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.lang.reflect.Method;
 
 // BEHOLD THE POWER OF JAVA GENERICS, REFLECTION, AND RECURSION!!!
+// Can you refactor this to apply the Template+Strategy patterns for expressive efficiency?
 public class Smell1LetsGo {
     private static Map<String, Map<Integer, Map<Integer, Integer>>> __cacheOfCaches = new HashMap<String, Map<Integer, Map<Integer, Integer>>>();
 
@@ -17,7 +18,7 @@ public class Smell1LetsGo {
 	}
 
 	if (args.length < 3 || !operations.contains(args[0])) {
-	    System.out.println("Usage: java ser515.smells.Smell1EvenBetter <op> <num> <pow>+");
+	    System.out.println("Usage: java ser515.smells.Smell1LetsGo <op> <num> <pow>+");
 	    System.exit(-1);
 	}
 	Method method = null;
@@ -72,8 +73,9 @@ public class Smell1LetsGo {
 	}
 	return res;
     }
-    // 𝐴(𝑚,𝑛)=2𝑛 if 𝑚=0 or 𝑛≤1,
-    // otherwise = 𝐴(𝑚−1,𝐴(𝑚,𝑛−1).
+    // A(m, n) => 𝐴(0,𝑛)=n+1  if m==0
+    // A(m-1,1) if n==0,  
+    // otherwise = 𝐴(𝑚−1,𝐴(𝑚,𝑛−1)
     private static int ack(Integer n, Integer a, Map<Integer, Map<Integer, Integer>> cache) {
 	Map<Integer, Integer> entry = cache.get(n);
 	
