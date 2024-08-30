@@ -1,0 +1,5 @@
+Bob*******CASmith*****12345San Luis**113 S. 1st Street***
+Joe*******AzLuftwitz**98726Ajo*******98 North 10th Pl.***
+Sue*******MNAnastwitz*81726Duluth****155 S. Elm**********
+Al********FlJohnson***92812Melbourne*15 West B St.*******
+END
