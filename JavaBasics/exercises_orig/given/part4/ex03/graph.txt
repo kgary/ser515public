@@ -1,4 +1,0 @@
-45      gas             blue
-23      phone           magenta
-80      rent            gray
-70      electric        green
