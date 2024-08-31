@@ -4,8 +4,7 @@ import java.io.*;
 class SockServer {
     public static void main (String args[]) throws Exception {
 
-        int count = 0;
-        ServerSocket    serv = null;
+        ServerSocket serv = null;
         InputStream in = null;
         OutputStream out = null;
         Socket sock = null;

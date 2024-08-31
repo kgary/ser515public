@@ -6,7 +6,8 @@ class SockClient {
         Socket          sock = null;
         OutputStream    out = null;
         InputStream     in = null;
-	int i1=0, i2=0;
+        int i1=0;
+        int i2=0;
 
 	if (args.length != 2) {
 	    System.out.println("USAGE: java SockClient int1 int2");

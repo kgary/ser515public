@@ -6,7 +6,8 @@ class SockClientState {
 		Socket          sock = null;
 		OutputStream    out = null;
 		InputStream     in = null;
-		int i1=0, i2=0;
+		int i1=0;
+		int i2=0;
 		char cmd = ' ';
 
 		if (args.length < 2 || args.length > 3) {
