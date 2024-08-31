@@ -25,7 +25,6 @@ class FirstThread {
         int sleepDelay = Integer.parseInt(args[1]);
         
         for (int loop=0; loop < times; loop++) {
-        	
             Runnable worker = new Worker425(loop, sleepDelay*loop);
             Thread task = new Thread(worker, "Task#"+loop);
             task.start();
