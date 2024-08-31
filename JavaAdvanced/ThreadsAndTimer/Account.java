@@ -14,20 +14,9 @@ class Transaction extends Thread {
             account.deposit(id*i);
         }
     }
-
-    public static void main(String args[]) throws InterruptedException {
-        Account account = new Account();
-
-        for (int i=1; i <= 3; i++) {
-            Transaction trans = new Transaction(i, account);
-            trans.start();
-        }
-        Thread.sleep(8000);
-        System.out.println("Balance is " + account.getBalance());
-    }
 }
 
-class Account {
+public class Account {
     int     numTransactions = 0;
     int     balance = 0;
 
@@ -38,5 +27,22 @@ class Account {
 
     public synchronized int getBalance() {
         return balance;
+    }
+    
+    public static void main(String args[]) {
+        Account account = new Account();
+
+        for (int i=1; i <= 3; i++) {
+            Transaction trans = new Transaction(i, account);
+            trans.start();
+        }
+	try {
+	    Thread.sleep(10000);
+	    System.out.println("Balance is " + account.getBalance());
+	} catch (InterruptedException ie) {
+	    // To test the interrupt, send an interrupt signal to the java process within 10 seconds, e.g. kill -s INT <pid>
+	    System.out.println("Thread interrupted");
+	    ie.printStackTrace();
+	}
     }
 }

@@ -13,7 +13,8 @@ public class SimpleGrabHttpURL {
 		HttpURLConnection conn = null;
 		BufferedReader instream = null;
 		try {
-			conn = (HttpURLConnection) new URL(args[0]).openConnection();
+		    URI uri = new URI(args[0]);
+			conn = (HttpURLConnection) uri.toURL().openConnection();
 			Map<String, List<String>> map = conn.getHeaderFields();
 			for (Map.Entry<String, List<String>> entry : map.entrySet()) {
 				System.out.println("Key : " + entry.getKey() + 
@@ -25,7 +26,12 @@ public class SimpleGrabHttpURL {
 				System.out.println(line);
 			}
 		}
+		catch (URISyntaxException use) {
+			System.out.println("Invalid URL " + args[0]);
+			use.printStackTrace();
+		}
 		catch (IOException exc) {
+		    	System.out.println("Unable to read from URL " + args[0]);
 			exc.printStackTrace();
 		}
 		finally {

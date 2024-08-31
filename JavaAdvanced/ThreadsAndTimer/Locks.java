@@ -1,12 +1,16 @@
 import java.util.concurrent.locks.*;
 
 class Locks {
-    public static void main(String args[]) throws Exception {
-        Lock mutex = new ReentrantLock();
-
-        for (int i=0; i < 5; i++) {
-            (new LockThread(i, mutex)).start();
-        }
+    public static void main(String args[]) {
+	try {
+	    Lock mutex = new ReentrantLock();
+	    
+	    for (int i=0; i < 5; i++) {
+		(new LockThread(i, mutex)).start();
+	    }
+	} catch (Throwable t) {
+	    t.printStackTrace();
+	}
     }
 }
 
