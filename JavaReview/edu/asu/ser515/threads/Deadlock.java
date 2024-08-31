@@ -1,3 +1,5 @@
+package edu.asu.ser515.threads;
+
 public class Deadlock {
 	static class Friend {
 		private final String name;

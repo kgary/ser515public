@@ -1,5 +1,8 @@
+package edu.asu.ser515.sockets;
+
 import java.net.*;
 import java.io.*;
+
 public class UDPClient2 {
 	public static void main(String args[]){ 
 		// args give message contents and destination hostname

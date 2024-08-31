@@ -1,5 +1,8 @@
+package edu.asu.ser515.sockets;
+
 import java.net.*;
 import java.io.*;
+
 public class UDPServer2 {
 	public static void main(String args[]){ 
 		DatagramSocket aSocket = null;

@@ -1,10 +1,10 @@
 package edu.asu.ser515.threads;
 
 class Transaction extends Thread {
-    Account account;
+    BankAccount account;
     int id;
 
-    public Transaction(int id, Account account) {
+    public Transaction(int id, BankAccount account) {
         super("Transaction #" + id);
         this.account = account;
         this.id = id;

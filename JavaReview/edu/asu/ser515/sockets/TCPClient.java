@@ -1,5 +1,8 @@
+package edu.asu.ser515.sockets;
+
 import java.net.*;
 import java.io.*;
+
 public class TCPClient {
 	public static void main (String args[]) {
 		// arguments supply message and hostname
