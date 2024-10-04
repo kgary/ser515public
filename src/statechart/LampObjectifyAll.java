@@ -1,39 +1,6 @@
 import static java.util.Map.entry;
 import java.util.*;
 
-class LampException extends Exception {
-    LampException(String msg) {
-	super(msg);
-    }
-}
-
-// let's objectify everything
-// events - taken from 2_4_5
-interface LampEvent {}
-interface LowerLampEvent extends LampEvent {}
-interface HigherLampEvent extends LampEvent {}
-
-class BlownLampEvent implements LampEvent {
-    public String toString() { return "Light Bulb Blown Event. "; }
-}
-
-class LeftClickEvent implements LowerLampEvent {
-    LeftClickEvent() { super(); }
-    public String toString() { return "Knob Left-Turn-Click Event. "; }
-}
-class RightClickEvent implements HigherLampEvent {
-    RightClickEvent() { super(); }
-    public String toString() { return "Knob Right-Turn-Click Event. "; }
-}
-class AlexaLowerEvent implements LowerLampEvent {
-    AlexaLowerEvent() { super(); }
-    public String toString() { return "Alexa Lower Event. "; }
-}
-class AlexaHigherEvent implements HigherLampEvent {
-    AlexaHigherEvent() { super(); }
-    public String toString() { return "Alexa Higher Event. "; }
-}
-
 // States - factor up from enums
 interface LampState {
     void entryAction();
@@ -122,9 +89,9 @@ final class Transition {
     }
 }
 
-public class LampSM7 extends ALampState {  // looks weird but this is the State Pattern
+public class LampObjectifyAll extends ALampState {  // looks weird but this is the State Pattern
     // effectively the object is a single state at the top-level, with nested substates
-    LampSM7() { super("LAMP"); }
+    LampObjectifyAll() { super("LAMP"); }
     
     // The lamp now really just runs the SM
     LampState __currentState = new OffLampState();
@@ -147,7 +114,7 @@ public class LampSM7 extends ALampState {  // looks weird but this is the State 
     }
 
     public static void main(String[] args) {
-        LampSM7 l = new LampSM7();
+        LampObjectifyAll l = new LampObjectifyAll();
 
         int eventCount = 0;
 

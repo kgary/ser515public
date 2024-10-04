@@ -1,16 +1,8 @@
 import static java.util.Map.entry;
 import java.util.*;
 
-class LampException extends Exception {
-    LampException(String msg) {
-	super(msg);
-    }
-}
+public class LampEnumAll implements LampInterface {
 
-public class LampSM6 {
-    // let's also enum our even types
-    enum EventType { LOWER, HIGHER, BLOWN }
-    enum Intensity { OFF, LOW, HIGH, BURNOUT }
     private Intensity __intensity;
 
     // instead of the if statement let's setup a state transition table
@@ -18,7 +10,7 @@ public class LampSM6 {
     // We will represent as 2 2-tuples:
     Map<Intensity, Map<EventType, Intensity>> __table = new HashMap<Intensity, Map<EventType, Intensity>>();
     
-    public LampSM6() {
+    public LampEnumAll() {
 	__intensity = Intensity.OFF;
 	__table.put(Intensity.OFF, Map.ofEntries(entry(EventType.LOWER, Intensity.OFF),
 						 entry(EventType.HIGHER, Intensity.LOW),
@@ -38,6 +30,13 @@ public class LampSM6 {
 	// if we specified our transition table properly (completely) this can never be NULL
 	__intensity = __table.get(__intensity).get(e);
     }
+
+    public void click(ClickEvent ce) throws LampException {
+	// This is as simple as mapping click events to generic event types
+	if (ce == ClickEvent.LEFT) eventHandler(EventType.LOWER);
+	if (ce == ClickEvent.RIGHT) eventHandler(EventType.HIGHER);
+    }
+    
     public boolean isLampOff() {
         return __intensity == Intensity.OFF;
     }
@@ -48,7 +47,7 @@ public class LampSM6 {
 	return __intensity == Intensity.HIGH;
     }
     
-    // this class knows about the concrete types. We coule abstract this out too!
+    // this class knows about the concrete types. We could abstract this out too!
     class EventFactory {
 	static EventType getNextEvent() {
 	    double r = Math.random();
@@ -59,7 +58,7 @@ public class LampSM6 {
     }
 
     public static void main(String[] args) {
-        LampSM6 l = new LampSM6();
+        LampEnumAll l = new LampEnumAll();
 
         int eventCount = 0;
 
