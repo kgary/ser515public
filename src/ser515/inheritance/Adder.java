@@ -12,6 +12,11 @@ public class Adder
 		System.out.print("Add int: ");
 		return x + y;
 	}
+	public float add(float x, int y)
+	{
+		System.out.print("Add float: ");
+		return x + y;
+	}
 	public static void main(String args[])
 	{
 		Adder object = new Adder();

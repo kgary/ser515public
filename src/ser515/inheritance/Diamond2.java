@@ -10,9 +10,14 @@ interface Hearts {
     default int add(int num) { return num+30; }
 }
 
-public class Diamond implements Spades, Hearts, Clubs {
+class DiamondImpl implements Clubs, Spades, Hearts {
+    public int add(int num) {
+        return num+5;
+    }
+}
+public class Diamond2 extends DiamondImpl {
     public static void main(String[] args) {
-	    Diamond d = new Diamond();
+	    Diamond2 d = new Diamond2();
 	    System.out.println("Add is " + d.add(10));
     }
 }
