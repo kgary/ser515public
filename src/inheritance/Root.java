@@ -1,4 +1,4 @@
-package ser515.inheritance;
+package inheritance;
 
 class Root {
     public void print() { System.out.println(Polymorph1NC.getCount() + ":\tI'm a Root object: " + toString()); }

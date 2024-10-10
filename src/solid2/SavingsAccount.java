@@ -1,4 +1,4 @@
-package ser515.smells;
+package solid2;
 
 class SavingsAccount extends Account {
     private float initialBalance = 0.0f;

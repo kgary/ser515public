@@ -1,4 +1,4 @@
-package ser515.inheritance;
+package inheritance;
 
 /**
    Polymorph1 demonstrates the ability to assign an

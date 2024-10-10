@@ -1,4 +1,4 @@
-package ser515.smells;
+package solid3;
 
 // Compatible with framework. But really we'd need a factory per type
 public class FrameworkPowerFactory implements IFrameworkPowerFactory {

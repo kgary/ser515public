@@ -1,4 +1,4 @@
-package ser515.smells;
+package solid3;
   
 // This code will return the 1st argument to the power of all subsequent arguments
 // This is the best. You would add polish like bounded caching to avoid memory overflow, and

@@ -1,3 +1,5 @@
+package statechart;
+
 
 public class Lamp implements LampInterface {
     private LightBulb __lightBulb;

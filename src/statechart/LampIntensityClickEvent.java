@@ -1,3 +1,5 @@
+package statechart;
+
 public class LampIntensityClickEvent implements LampInterface {
     private Intensity __intensity;
 

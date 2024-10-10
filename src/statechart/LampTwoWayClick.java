@@ -1,3 +1,5 @@
+package statechart;
+
 public class LampTwoWayClick implements LampInterface {
     private LightBulb __lightBulb;
 

@@ -1,3 +1,5 @@
+package statechart;
+
 import java.util.Properties;
 
 public final class LampDriver {

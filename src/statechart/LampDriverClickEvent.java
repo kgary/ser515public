@@ -1,3 +1,5 @@
+package statechart;
+
 // for versions which need an actual CE
 public final class LampDriverClickEvent {
     private LampDriverClickEvent() {}

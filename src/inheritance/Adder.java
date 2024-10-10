@@ -1,4 +1,4 @@
-package ser515.inheritance;
+package inheritance;
 
 public class Adder
 {

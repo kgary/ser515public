@@ -1,4 +1,4 @@
-package ser515.smells;
+package solid3;
 
 // Modified version of Smell1TheBestFactory to support the new framework IoC
 public class Smell1TheBestFactorySimpleComponent implements IFrameworkComponent {

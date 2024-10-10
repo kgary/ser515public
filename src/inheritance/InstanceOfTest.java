@@ -1,4 +1,4 @@
-package ser515.inheritance;
+package inheritance;
 
 interface A {
   public int getX();

@@ -1,4 +1,4 @@
-package ser515.smells;
+package solid3;
 
 // This code will return the 1st argument to the power of all subsequent arguments
 // Does this code smell? If so, why? What best programming practice does it violate?

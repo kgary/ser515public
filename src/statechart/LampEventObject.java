@@ -1,3 +1,5 @@
+package statechart;
+
 public class LampEventObject {
     private LightBulb __lightBulb;
 

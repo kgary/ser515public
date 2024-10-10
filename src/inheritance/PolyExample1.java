@@ -1,4 +1,4 @@
-package ser515.inheritance;
+package inheritance;
 
 class Vehicle {
     public int getTax() {

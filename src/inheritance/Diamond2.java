@@ -1,4 +1,4 @@
-package ser515.inheritance;
+package inheritance;
 
 interface Clubs {
     default int add(int num) { return num+10; }

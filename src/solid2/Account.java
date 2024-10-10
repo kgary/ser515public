@@ -1,4 +1,4 @@
-package ser515.smells;
+package solid2;
 
 class Account {
     protected float balance = 0.0f;

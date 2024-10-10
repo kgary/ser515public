@@ -1,3 +1,5 @@
+package statechart;
+
 public final class LightBulb {
     private static final int __WATTS_INCREMENT = 20;
     private static final int __WATTS_MAX = 60;

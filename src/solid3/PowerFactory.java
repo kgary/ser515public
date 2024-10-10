@@ -1,4 +1,4 @@
-package ser515.smells;
+package solid3;
 
 public class PowerFactory {
     private PowerFactory() {}

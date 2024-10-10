@@ -1,3 +1,5 @@
+package statechart;
+
 public interface LampInterface {
     public enum ClickEvent { LEFT, RIGHT }
     public enum Intensity { OFF, LOW, HIGH, BURNOUT }

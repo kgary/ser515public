@@ -1,4 +1,4 @@
-package ser515.smells;
+package solid2;
 
 public class Smell2Try2 {
     public static void main(String[] args) {

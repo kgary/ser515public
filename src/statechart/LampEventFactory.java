@@ -1,3 +1,5 @@
+package statechart;
+
 // Let's use polymorphism via tagging types to get rid of
 // almost all of our conditionals on click events
 interface LampEvent {}
