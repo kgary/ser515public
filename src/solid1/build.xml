@@ -1,0 +1,32 @@
+<project name="SER515-SOLID1-Example" default="dist" basedir=".">
+	<property name="src" value="." />
+	<property name="build" value="classes" />
+	<property name="jar" value="banking-given.jar" />
+    <property name="app" value="banking.gui.Main" />
+	<target name="prepare">
+		<tstamp/>
+		<mkdir dir="${build}" />
+	</target>
+
+	<target name="compile" depends="prepare">
+		<javac srcdir="${src}" destdir="${build}" />
+	</target>
+
+	<target name="dist" depends="compile">
+		<jar jarfile="${jar}" basedir="${build}" />
+	</target>
+
+  	<target name="run">
+		<echo message="Invoking ${app}"/>
+		<java fork="true" classname="${app}" classpath="${build}" />
+  	</target>
+
+	<target name="clean">
+		<delete dir="${build}" />
+		<delete file="${jar}" />
+	</target>
+
+</project>
+	
+
+
