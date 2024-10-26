@@ -7,7 +7,7 @@ javac -d classes *.java
 java -cp classes <various Smell2 drivers>
 ```
 
-You can put the classes direc tory wherever you like just be consistent in referenciong it when using -d and -cp flags.
+You can put the classes directory wherever you like just be consistent in referenciong it when using -d and -cp flags.
 
 While this code works fine, and on initial inspection it would seem to be reasonably well-structured, it actually violates some
 best practices of OOP and multiple [SOLID principles]https://anmolsehgal.medium.com/solid-principles-de1029ef8a8f.
