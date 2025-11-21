@@ -12,17 +12,17 @@ public class StepDefsSqrt1 {
 
     @Given("I have an integer {string}")
     public void i_have_an_integer(String string) {
-	// Write code here that turns the phrase above into concrete actions
-	testInt = Integer.parseInt(string); 
+        // Write code here that turns the phrase above into concrete actions
+        testInt = Integer.parseInt(string);
     }
-    
+
     @When("I compute the square root")
     public void i_compute_the_square_root() {
-	result = SimpleSquareRootFunction.makeSqrt(testInt);
+        result = SimpleSquareRootFunction.makeSqrt(testInt);
     }
 
     @Then("I should return a positive number")
     public void i_should_return_a_positive_number() {
-	assertTrue(result > 0.0);
+        assertTrue(result > 0.0);
     }
 }

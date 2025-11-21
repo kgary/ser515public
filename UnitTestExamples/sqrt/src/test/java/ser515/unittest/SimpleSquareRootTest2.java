@@ -11,13 +11,13 @@ class SimpleSquareRootTest2 {
     @Test
     void testMakeSqrt() {
 	// note both are run with one test reporting. If the 1st assert fails next one is not called
-	assertEquals(0.0, SimpleSquareRootFunction.makeSqrt(1));  // x-1 = 0
-	assertEquals(0.0, SimpleSquareRootFunction.makeSqrt(-1));  // x+2 = 0
+	    assertEquals(0.0, SimpleSquareRootFunction.makeSqrt(1));  // x-1 = 0
+	    assertEquals(0.0, SimpleSquareRootFunction.makeSqrt(-1));  // x+2 = 0
     }
     @Test
     void testMakeSqrt2() {
-	// what is the problem here?
-	assertEquals(Math.sqrt(3), SimpleSquareRootFunction.makeSqrt(2));  // x-1=1, x+2=3, so sqrt of 3 so this is wrong
+	    // what is the problem here?
+	    assertEquals(Math.sqrt(3), SimpleSquareRootFunction.makeSqrt(2));  // x-1=1, x+2=3, so sqrt of 3 so this is wrong
     }
     
     // or we could try TestAll
